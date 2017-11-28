@@ -3,7 +3,7 @@ function doFunction(){
 	// set url and core parameters
 	url = "https://maps.googleapis.com/maps/api/staticmap?"
 	parameters = [
-		"key=AIzaSyDkbadkUk1b7gT9Z-ei_fNQwb_3Z7jKrOY",
+		"key=AIzaSyA0GvevmQAO0t_08HtYFikKdUS5kzGRkKg",
 		"size=400x400",
 	]
 
