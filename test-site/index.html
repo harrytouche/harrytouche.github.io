@@ -3,19 +3,46 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" async></script>
 </head>
 
 <body>
 
-    <h3>
-        Welcome
-    </h3>
-    <p>
-        Hello world
-    </p>
+    <div id="title">
+        <h2>Welcome to my Analytics test website!</h2>
+    </div>
+
+    <!-- PAGE LOAD RULES -->
+    <hr>
+    <div id=page_load>
+        <h3>Form submission</h3>
+        <h4 id=user_info></h4>
+
+        <p>Fill in this form and watch the text change. How can we collect the user information?</p>
+        <form onsubmit="submitForm(this)">
+            <input type="text" name="inputname" placeholder="What's your username?"> <br/>
+            <input type="radio" name="inputlevel" value="beginner" checked>Beginner 
+            <input type="radio" name="inputlevel" value="advanced">Advanced <br/>
+            <input type="submit">
+        </form>
+    </div>
 
 
+    <!-- EVENT BASED RULES VS DIRECT CALL RULES -->
+    <hr>
+    <div id=eb_vs_dc onclick="cycleColor(this)">
+        <h3>Two ways of collecting interaction-based information</h3>
+        <p>Click on the carousel to change the colour. How can we collect the new color?</p>
+    </div>
 
+    <!-- PRODUCTS -->
+    <hr>
+    <div>
+        <h3>Choose a product to add it to the basket!</h3>
+        <p>Product information has to be sent to analytics in a very specific way... It must be constructed</p>
+        <h4 id="add-to-basket-notification">You haven't added anything yet...</h4>
+        <div id="product-card-holder"></div>
+    </div>
 
 
 </body>

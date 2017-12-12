@@ -1,3 +1,48 @@
-h3{}
+html {
+    font-family: sans-serif;
+}
 
-p{}
+
+#eb_vs_dc {
+    background-color: red;
+    height: 200px;
+    cursor: pointer;
+}
+
+
+body {
+    text-align: center;
+}
+
+body > div {
+    margin: auto;
+    border-style: dashed;
+    border-radius: 10px;
+    border-width: 1px
+}
+
+hr {
+    padding-top: 5px;
+    background-color: black;
+}
+
+br {
+    padding-bottom: 5px
+}
+
+form {
+    padding-bottom: 5px
+}
+
+
+#product-card-holder{
+    width: 100%;
+    height: 370px;
+
+}
+
+.product-card{
+    float: left;
+    width: 33%;
+    padding: auto;
+}
