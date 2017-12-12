@@ -35,10 +35,20 @@ for (var i=0; i<dataLayer.products.length; i++){
     mydiv.appendChild(productPrice)
 
     // purchase button
-    var productBuy = document.createElement("input")
-    productBuy.setAttribute("type", "submit")
-    productBuy.setAttribute("onclick", "addToBasket('" + dataLayer.products[i].sku + "')")
-    mydiv.appendChild(productBuy)
+    var productForm = document.createElement("form")
+    productForm.setAttribute("onsubmit", "addToBasket(this); return false")
+    
+    var productSKU = document.createElement("input")
+    productSKU.setAttribute("name", "productSKU")
+    productSKU.setAttribute("type", "text")
+    productSKU.classList.add("product-sku")
+    productSKU.value = dataLayer.products[i].sku
+    productForm.appendChild(productSKU)
+
+    var productBuyButton = document.createElement("input")
+    productBuyButton.setAttribute("type", "submit")
+    productForm.appendChild(productBuyButton)
+    mydiv.appendChild(productForm)
 
     document.getElementById("product-card-holder").append(mydiv)
 }
@@ -73,13 +83,12 @@ submitForm = function(thisForm){
 }
 
 
-addToBasket = function(productSKU){
-
+addToBasket = function(thisForm){
+    //return false
+    var productSKU = thisForm.productSKU.value
     console.log(productSKU)
     dataLayer.productEvent = productSKU
     try{_satellite.track("AddToBasket")}catch(err){console.log("Not able to fire direct call rule")}
-
     document.getElementById("add-to-basket-notification").innerHTML = "<h4>Thanks for adding " + productSKU + " to the basket</h4>"
-
     return false
 }

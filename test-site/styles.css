@@ -46,3 +46,9 @@ form {
     width: 33%;
     padding: auto;
 }
+
+.product-sku{
+    visibility: hidden;
+    display: block;
+    height: 0;
+}
