@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" async></script>
+    <script src="//assets.adobedtm.com/076c7ec58205a2a3fb3547bee9d6c063df9870c1/satelliteLib-aa1a083fdf6a8bfb3a638f0f414035e91fae29aa-staging.js"></script>
 </head>
 
 <body>
@@ -19,8 +19,8 @@
         <h4 id=user_info></h4>
 
         <p>Fill in this form and watch the text change. How can we collect the user information?</p>
-        <form onsubmit="submitForm(this)">
-            <input type="text" name="inputname" placeholder="What's your username?"> <br/>
+        <form id="login-form" onsubmit="submitForm(this)">
+            <input type="text" name="inputname" placeholder="What's your username?" required> <br/>
             <input type="radio" name="inputlevel" value="beginner" checked>Beginner 
             <input type="radio" name="inputlevel" value="advanced">Advanced <br/>
             <input type="submit">
@@ -41,9 +41,26 @@
         <h3>Choose a product to add it to the basket!</h3>
         <p>Product information has to be sent to analytics in a very specific way... It must be constructed carefully</p>
         <h4 id="add-to-basket-notification">You haven't added anything yet...</h4>
-        <div id="product-card-holder"></div>
+        <div id="product-card-holder" class="product-card-holder"></div>
+    </div>
+
+    <!-- PURCHASE -->
+    <div id=purchase>
+        <h3>Buy now!</h3>
+        <h4>Click here to buy the products in your basket!</h4>
+
+        <p>How do we go about collecting the information about the products?</p>
+        <form id="checkout" onsubmit="checkout(this);return false">
+            <input type="submit">
+        </form>
     </div>
 
 
+
+
+
+    <script src="scripts.js"></script>
+    <script src="scripts_home.js"></script>
+    <script type="text/javascript">try{_satellite.pageBottom()}catch(err){console.log("Unable to trigger pageBottom()")}</script>
 </body>
 </html>
