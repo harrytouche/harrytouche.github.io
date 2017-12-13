@@ -1,6 +1,5 @@
-// clear order information 
+// get rid of old order information
 localStorage.order = ""
-
 
 // set user information
 try{

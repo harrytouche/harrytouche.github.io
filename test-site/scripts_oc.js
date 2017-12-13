@@ -1,3 +1,5 @@
+dataLayer.orderID = (localStorage.order) ? JSON.parse(localStorage.order).orderID : undefined
+
 
 // add product information to page
 try{

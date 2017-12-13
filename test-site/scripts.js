@@ -1,6 +1,5 @@
 dataLayer = {
     pageName: location.pathname.split("/").slice(-1)[0].replace(".html","") || "homepage",
-    orderID: (localStorage.order) ? JSON.parse(localStorage.order).orderID : undefined,
     user: {
         name: localStorage.userName,
         level: localStorage.userLevel
@@ -11,9 +10,6 @@ dataLayer = {
         {name: "Skin-Tight Cycling Gear", price:99.00, image:"productC.jpg", sku: "ghi789", color:"purple", category:"clothes"},
     ]
 }
-
-// remove the order from localStorage if it exists
-//localStorage.order = ""
 
 // set document title
 document.title = dataLayer.pageName
