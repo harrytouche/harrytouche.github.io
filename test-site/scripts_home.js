@@ -78,7 +78,7 @@ submitForm = function(thisForm){
 
 addToBasket = function(thisForm){
     var productSKU = thisForm.productSKU.value
-    console.log(productSKU)
+    //console.log(productSKU)
     dataLayer.productEvent = productSKU
 
     // add product to dataLayer basket
