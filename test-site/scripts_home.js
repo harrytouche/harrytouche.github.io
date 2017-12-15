@@ -1,6 +1,3 @@
-// get rid of old order information
-localStorage.order = ""
-
 // set user information
 try{
     document.getElementById("user_info").innerText = "Your username is " + dataLayer.user.name + " and your level is " + dataLayer.user.level
