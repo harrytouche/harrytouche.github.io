@@ -1,4 +1,4 @@
-dataLayer = {
+digitalData = {
     pageName: location.pathname.split("/").slice(-1)[0].replace(".html","") || "homepage",
     user: {
         name: localStorage.userName,
@@ -12,7 +12,7 @@ dataLayer = {
 }
 
 // set document title
-document.title = dataLayer.pageName
+document.title = digitalData.pageName
 
 
 
