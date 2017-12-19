@@ -15,3 +15,18 @@
 |8|Order ID| | |
 |9|Product Category| | | 
 |10|Product Color| | |
+
+
+#### Google Analytics
+|Number|Custom Dimension|Custom Metric|
+|---|---|---|---|
+|1| | |
+|2| | |
+|3| | |
+|4| | |
+|5| | |
+|6| | |
+|7| | |
+|8| | |
+|9| | |
+|10| | |
