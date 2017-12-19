@@ -19,7 +19,7 @@
 
 #### Google Analytics
 |Number|Custom Dimension|Custom Metric|
-|---|---|---|---|
+|---|---|---|
 |1| | |
 |2| | |
 |3| | |
