@@ -9,8 +9,8 @@
 |2|URL| | | | |
 |3|Referring URL| | | | |
 |4|Page Name| | | | |
-|5|User Name|User Login| | | |
-|6|User Level| | | | |
+|5|User Name|User Login| |User Name| |
+|6|User Level| | | User Level| |
 |7|Carousel Color|Carousel Color Views| | | |
 |8|Order ID| | | | |
 |9|Product Category| | |  | |
