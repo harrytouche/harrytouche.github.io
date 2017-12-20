@@ -11,7 +11,7 @@
 |4|Page Name| | |Page Name| |
 |5|User Name|User Login| |User Name| |
 |6|User Level| | | User Level| |
-|7|Carousel Color|Carousel Color Views| | | |
+|7|Carousel Color|Carousel Color Views| |Carousel Color| |
 |8|Order ID| | | | |
 |9|Product Category| | |  | |
 |10|Product Color| | | | |
