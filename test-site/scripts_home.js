@@ -53,11 +53,13 @@ cycleColor = function(thisObject){
     var colors = ["gold", "lightseagreen", "beige", "green", "blue", "yellow", "cyan", "pink", "magenta", "fuschia", "cadetblue"]
     var newColor = colors[Math.floor(Math.random()*10)]
     digitalData.carouselColor = newColor
-    try{
-        _satellite.track("CarouselClick")
-    } catch(err){
-        console.log("Not able to fire direct call rule")
-    }
+
+    // push to Adobe
+    try{_satellite.track("CarouselClick")} catch(err){console.log("Not able to fire direct call rule")}
+
+    // push to GA
+    try{dataLayer.push({"event": "CarouselClick", "carouselColor":newColor})}catch(err){console.log("Unable to push to GTM data layer")}
+
     thisObject.style.backgroundColor = newColor
 }
 

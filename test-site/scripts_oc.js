@@ -1,6 +1,3 @@
-digitalData.orderID = (localStorage.order) ? JSON.parse(localStorage.order).orderID : undefined
-
-
 // add product information to page
 try{
     for (var i=0; i<digitalData.products.length; i++){
@@ -38,4 +35,11 @@ for(var i=0; i<digitalData.products.length; i++){
     totalCost += digitalData.products[i].quantity * digitalData.products[i].price
 }
 
-document.getElementById("order-summary").innerText = "You purchased " + totalUnits + " units, at a total cost of $" + totalCost.toFixed(0) + ". Your order number is: " + digitalData.orderID
+// create order data layer
+digitalData.order = {
+    orderTotal: totalCost,
+    orderID: (localStorage.order) ? JSON.parse(localStorage.order).orderID : undefined
+}
+
+
+document.getElementById("order-summary").innerText = "You purchased " + totalUnits + " units, at a total cost of $" + totalCost.toFixed(0) + ". Your order number is: " + digitalData.order.orderID
