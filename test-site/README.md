@@ -6,9 +6,9 @@
 |Number|eVar (AA)|event (AA)|prop (AA)| Custom Dimension (GA) | Custom Metric (GA)|
 |---|---|---|---|---|---|
 |1|DTM Library|Checkout Form View| | | |
-|2|URL| | | | |
+|2|URL| | |N/A (in-built)| |
 |3|Referring URL| | | | |
-|4|Page Name| | | | |
+|4|Page Name| | | |Page Name|
 |5|User Name|User Login| |User Name| |
 |6|User Level| | | User Level| |
 |7|Carousel Color|Carousel Color Views| | | |
