@@ -1,5 +1,6 @@
 // clear basket localstorage
 localStorage.basket = ""
+digitalData.products = (localStorage.order) ? JSON.parse(localStorage.order).products : undefined
 
 // add product information to page
 try{

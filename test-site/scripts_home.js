@@ -4,6 +4,14 @@ window.addEventListener("beforeunload",function(){
     localStorage.basket = JSON.stringify(digitalData.basket) || ""
 })
 
+digitalData.products = [
+    {name: "Bouquet of Flowers", price:15.00, image:"productA.jpg", sku: "abc123", color:"purple", category:"gift"},
+    {name: "Bar Tab", price:60.00, image:"productB.jpg", sku: "def456", color: "n/a", category:"gift"},
+    {name: "Skin-Tight Cycling Gear", price:99.00, image:"productC.jpg", sku: "ghi789", color:"purple", category:"clothes"}
+]
+
+
+
 // clear order details
 localStorage.order = ""
 
