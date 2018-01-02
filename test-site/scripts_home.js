@@ -18,7 +18,7 @@ localStorage.order = ""
 
 // set user information
 try{
-    document.getElementById("user_info").innerText = "Your username is " + digitalData.user.name + " and your level is " + digitalData.user.level
+    document.getElementById("user_info").innerText = "Your grade is " + digitalData.user.grade + " and your experience level is " + digitalData.user.level
 } catch(err){
     console.log("Can't display user info")
 }
@@ -96,9 +96,9 @@ cycleColor = function(thisObject){
 
 submitForm = function(thisForm){
     try{
-        var userName = thisForm.elements.inputname.value
+        var userGrade = thisForm.elements.inputgrade.value
         var userLevel = thisForm.elements.inputlevel.value
-        localStorage.userName = userName.toUpperCase()
+        localStorage.userGrade = userGrade.toUpperCase()
         localStorage.userLevel = userLevel.toUpperCase()
     } catch(err){console.log("Error submitting the form!")}
     thisForm.submit()

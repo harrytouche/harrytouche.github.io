@@ -33,9 +33,18 @@
 
         <p>Fill in this form and watch the text change. How can we collect the user information?</p>
         <form id="login-form" onsubmit="submitForm(this)">
-            <input type="text" name="inputname" placeholder="What's your username?" required> <br/>
+            <h5>What is your grade?</h5>
+            <select name="inputgrade">
+                <option value="partner">Partner</option>
+                <option value="manager">(Senior) Manager</option>
+                <option value="consultant">(Senior) Consultant</option>
+                <option value="analyst">Analyst</option>
+            </select>
+            <br>
+            <h5>What is your experience level?</h5>
             <input type="radio" name="inputlevel" value="beginner" checked>Beginner 
             <input type="radio" name="inputlevel" value="advanced">Advanced <br/>
+            <br>
             <input type="submit">
         </form>
     </div>
