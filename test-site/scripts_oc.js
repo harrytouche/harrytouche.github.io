@@ -1,3 +1,6 @@
+// clear basket localstorage
+localStorage.basket = ""
+
 // add product information to page
 try{
     for (var i=0; i<digitalData.products.length; i++){
@@ -41,8 +44,6 @@ digitalData.order = {
     orderID: (localStorage.order) ? JSON.parse(localStorage.order).orderID : undefined
 }
 
-// clear basket localstorage
-localStorage.basket = ""
 
 // add text to page
 document.getElementById("order-summary").innerText = "You purchased " + totalUnits + " units, at a total cost of $" + totalCost.toFixed(0) + ". Your order number is: " + digitalData.order.orderID

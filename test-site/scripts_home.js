@@ -1,3 +1,13 @@
+// load basket from data layer and save on page exit
+digitalData.basket = (localStorage.basket) ? JSON.parse(localStorage.basket) : undefined
+window.addEventListener("beforeunload",function(){
+    localStorage.basket = JSON.stringify(digitalData.basket) || ""
+})
+
+// clear order details
+localStorage.order = ""
+
+
 // set user information
 try{
     document.getElementById("user_info").innerText = "Your username is " + digitalData.user.name + " and your level is " + digitalData.user.level
@@ -49,13 +59,15 @@ try{
 }
 
 
-// load basket from data layer and save on page exit
-digitalData.basket = (localStorage.basket) ? JSON.parse(localStorage.basket) : undefined
-window.addEventListener("beforeunload",function(){
-    localStorage.basket = JSON.stringify(digitalData.basket) || ""
-})
-// clear order details
-localStorage.order = ""
+// dynamic banner
+var bannerText = (digitalData.basket) ? "You have items in your basket... have free delivery on us!" : "Welcome! Our products are near the bottom of the page"
+var bannerElement = document.createElement("h4")
+bannerElement.innerText = bannerText
+document.getElementById("dynamic_banner").appendChild(bannerElement)
+
+
+
+
 
 
 
