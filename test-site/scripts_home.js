@@ -43,10 +43,20 @@ try{
         mydiv.appendChild(productForm)
 
         document.getElementById("product-card-holder").appendChild(mydiv)
-}
+    }
 } catch(err){
     console.log("Can't add product information")
 }
+
+
+// load basket from data layer and save on page exit
+digitalData.basket = (localStorage.basket) ? JSON.parse(localStorage.basket) : undefined
+window.addEventListener("beforeunload",function(){
+    localStorage.basket = JSON.stringify(digitalData.basket) || ""
+})
+// clear order details
+localStorage.order = ""
+
 
 
 cycleColor = function(thisObject){
