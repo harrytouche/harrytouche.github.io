@@ -68,11 +68,12 @@ try{
 
 
 // dynamic banner
+/*
 var bannerText = (digitalData.basket) ? "You have items in your basket... have free delivery on us!" : "Welcome! Our products are near the bottom of the page"
 var bannerElement = document.createElement("h4")
 bannerElement.innerText = bannerText
 document.getElementById("dynamic_banner").appendChild(bannerElement)
-
+*/
 
 
 
