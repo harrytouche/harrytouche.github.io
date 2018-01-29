@@ -15,3 +15,4 @@
 |8|Order ID| | | | |
 |9|Product Category| | |  | |
 |10|Product Color| | | | |
+|11|Customer ID| | | | |
