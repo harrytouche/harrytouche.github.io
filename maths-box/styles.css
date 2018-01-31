@@ -1,0 +1,28 @@
+body {
+    background-color: #ffffee;
+    font-family: arial;
+    text-align: center;
+    font-size: x-large;
+}
+h1 {
+    color: navy;
+}
+p {
+    color: red;
+}
+
+table {
+    margin: 0 auto;
+    text-align: center;
+    font-size: x-large;
+}
+
+input {
+	text-align: center;
+	font-size: large;
+}
+
+select{
+	text-align: center;
+	font-size: large;
+}
