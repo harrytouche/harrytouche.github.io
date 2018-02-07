@@ -47,6 +47,7 @@ try{
         // purchase button
         var productForm = document.createElement("form")
         productForm.setAttribute("onsubmit", "addToBasket(this); return false")
+        productForm.setAttribute("name", "addToBasketForm")
         
         var productSKU = document.createElement("input")
         productSKU.setAttribute("name", "productSKU")
