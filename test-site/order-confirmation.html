@@ -9,16 +9,17 @@
 
 
     <script>
-        if(localStorage.gtm == "1"){
+        if(localStorage.tm == "gtm"){
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-5DTHTCR');
-        } else {
+        } else if (localStorage.tm == "dtm"){
             document.write("<script src='//assets.adobedtm.com/076c7ec58205a2a3fb3547bee9d6c063df9870c1/satelliteLib-aa1a083fdf6a8bfb3a638f0f414035e91fae29aa.js'><\/script>")
+        } else if (localStorage.tm == "opentag"){
+            document.write("<script src='//d3c3cq33003psk.cloudfront.net/opentag-177250-testwebsite.js' async defer><\/script>")
         }
-
     </script>
 
 
