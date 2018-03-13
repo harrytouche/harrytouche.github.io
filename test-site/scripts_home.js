@@ -103,7 +103,7 @@ submitForm = function(thisForm){
         var crmID = thisForm.elements.crmid.value || ""
         localStorage.userGrade = userGrade.toUpperCase()
         localStorage.userLevel = userLevel.toUpperCase()
-        localStorage.crmID = (crmID <= 100 && crmID>=1) ? crmID : localStorage.crmID
+        localStorage.crmID = (crmID <= 100 && crmID>=1) ? crmID : localStorage.crmID || ""
     } catch(err){console.log("Error submitting the form!")}
     thisForm.submit()
 }
