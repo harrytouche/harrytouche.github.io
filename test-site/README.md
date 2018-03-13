@@ -9,7 +9,7 @@
 |2|URL| | |N/A (in-built)| |
 |3|Referring URL| | | | |
 |4|Page Name| | |Page Name| |
-|5|User Name|User Login| |User Name| |
+|5|User Grade|User Login| |User Grade| |
 |6|User Level| | | User Level| |
 |7|Carousel Color|Carousel Color Views| |Carousel Color| |
 |8|Order ID| | | | |
