@@ -1,14 +1,150 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-	<link rel="stylesheet" href="styles.css">
-	<link rel="shortcut icon" href="/resources/icon.png" type="image/x-icon" defer>
-</head>
+    
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Homepage</title>
+
+    <!-- Google Tag Manager -->
+    <script></script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Custom Scripts -->
+
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- MATERIAL DESIGN LITE -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-amber.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    
+    <!-- CSS
+    <link rel="stylesheet" href="/resources/styles.css" defer>
+    -->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../resources/icon.png" type="image/x-icon" defer>
+    
+    
+    <!-- PWA
+    <link rel="manifest" href="/resources/manifest.json">
+    <meta name="theme-color" content="#607d8b">
+    -->
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-startup-image" href="/resources/icon.png">
+    <link rel="apple-touch-icon image_src" href="/resources/icon.png">
+
+
+    <!-- Meta Description -->
+    <meta name="description" content="Showcasing projects and exciting things">
+
+  </head>
+
+
+    <!--start of body tag-->
+    <body>
+
+    <style>
+      #header-icon {
+        cursor:pointer;
+        margin-right:10px;
+        height:80%;
+        width:auto;
+      }
+
+      a i {
+        padding-right: 10px
+      }
+    </style>
+
+
+    <!-- Nav bar -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <img src="../resources/icon.png" class="img-fluid" id="header-icon" onclick="location.href='/'"/>
+          <span class="mdl-layout-title">harrytouche.github.io</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="/test-site">
+              <i class="material-icons">meeting_room</i>Web Testing Site
+            </a>
+            <a class="mdl-navigation__link" href="/maths-box">
+              <i class="material-icons">add_circle_outline</i>Maths Box Solver
+            </a>
+            <a class="mdl-navigation__link" href="about">
+              <i class="material-icons">person_add</i>About Me
+            </a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+        <span class="mdl-layout-title" onclick="location.href='/'">harrytouche.github.io</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="/test-site">
+              <i class="material-icons mdl-color-text--primary">meeting_room</i>Web Testing Site
+          </a>
+          <a class="mdl-navigation__link" href="/maths-box">
+              <i class="material-icons mdl-color-text--primary">add_circle_outline</i>Maths Box Solver
+          </a>
+          <a class="mdl-navigation__link" href="/about">
+              <i class="material-icons mdl-color-text--primary">person_add</i>About Me
+          </a>
+        </nav>
+      </div>
+
+
+      <script>
+        $('nav.mdl-layout--large-screen-only > a.mdl-navigation__link').hover(
+          function(){ $(this).addClass('mdl-color-text--accent') },
+          function(){ $(this).removeClass('mdl-color-text--accent') }
+        )
+      </script>
 
 
 
-<body>
+      <!-- start of MDL main container -->
+      <main class="mdl-layout__content">
+        
+      	<style>
+		body {
+	    background-color: #ffffee;
+	    font-family: arial;
+	    text-align: center;
+	    font-size: x-large;
+		}
+		h1 {
+		    color: navy;
+		}
+		p {
+		    color: red;
+		}
+
+		table {
+		    margin: 0 auto;
+		    text-align: center;
+		    font-size: x-large;
+		}
+
+		input {
+			text-align: center;
+			font-size: large;
+		}
+
+		select{
+			text-align: center;
+			font-size: large;
+		}
+	</style>
 	<h1>Maths Box Solver!</h1>
 
 		<table>
@@ -101,7 +237,21 @@
 
 
 
-</body>
 
-<!--END OF PAGE-->
+      </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </body>
 </html>
