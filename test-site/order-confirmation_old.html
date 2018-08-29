@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+    <script>
+        if(localStorage.tm == "gtm"){
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5DTHTCR');
+        } else if (localStorage.tm == "dtm"){
+            document.write("<script src='//assets.adobedtm.com/076c7ec58205a2a3fb3547bee9d6c063df9870c1/satelliteLib-aa1a083fdf6a8bfb3a638f0f414035e91fae29aa.js'><\/script>")
+        } else if (localStorage.tm == "opentag"){
+            document.write("<script src='//d3c3cq33003psk.cloudfront.net/opentag-177250-testwebsite.js' async defer><\/script>")
+        } else if (localStorage.tm == "launch"){
+            document.write('<script src="//assets.adobedtm.com/launch-ENa2ef5bca58e642239e71cd81931a9696.min.js" async><\/script>')
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <div id="title">
+        <h2>Thanks for your order!</h2>
+        <h4 onclick="window.location.href = window.location.href.replace('order-confirmation.html','')" style="cursor:pointer">Click here to return to the homepage</h4>
+    </div>
+    <hr>
+    <div id="order-box">
+        <h3>Your purchase</h3>
+        <div id="order-details" class="product-card-holder"></div>
+        <h3 id="order-summary">Your order summary is here</h3>
+    </div>
+
+
+
+    <script src="scripts_oc.js"></script>
+    <script type="text/javascript">try{_satellite.pageBottom()}catch(err){console.log("Unable to trigger pageBottom()")}</script>
+</body>
+</html>

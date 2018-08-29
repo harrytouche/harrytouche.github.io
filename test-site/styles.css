@@ -9,7 +9,6 @@ body {
 
 body > div {
     margin: auto;
-    border-style: dashed;
     border-radius: 10px;
     border-width: 1px
 }
