@@ -116,20 +116,92 @@
 
 
       <!-- start of MDL main container -->
-      <main class="mdl-layout__content">
-        
-      	<p> stuff stuff stuff </p>
-
-
+      <main class="mdl-layout__content" style="justify-content:center; text-align: center">
+      	<h3>The Past</h3> 
+        <div class="mdl-grid" id="about-me-grid-past" style="justify-content:center; text-align: justify"></div>
+        <h3>The Present</h3>
+        <div class="mdl-grid" id="about-me-grid-present" style="justify-content:center; text-align: justify;"></div>
       </main>
 
 
 
 
+<script>
+var aboutMe = [
+  {
+    "type": "past",
+    "title": "Origin Story", 
+    "text": "I was born in London, but was quickly taken off to Moscow, where my dad had the unenviable task of helping to set up the Russian firm.",
+  },
+  {
+    "type": "past",
+    "title": "The Dragon School", 
+    "text": "I was born in London, but was quickly taken off to Moscow, where my dad had the unenviable task of helping to set up the Russian firm.",
+  },
+  {
+    "type": "past",
+    "title": "Eton College", 
+    "text": "I was born in London, but was quickly taken off to Moscow, where my dad had the unenviable task of helping to set up the Russian firm.",
+  },
+  {
+    "type": "past",
+    "title": "Gap Yah",
+    "pic":"arctic.gif", 
+    "text": "I was born in London, but was quickly taken off to Moscow, where my dad had the unenviable task of helping to set up the Russian firm.",
+  },
+  {
+    "type": "past",
+    "title": "Unay", 
+    "pic":"oxford.gif",
+    "text": "I was born in London, but was quickly taken off to Moscow, where my dad had the unenviable task of helping to set up the Russian firm.",
+  },
+  {
+    "type": "past",
+    "title": "The Original Touche", 
+    "text": "I was born in London, but was quickly taken off to Moscow, where my dad had the unenviable task of helping to set up the Russian firm.",
+  },
+  {
+    "type": "present",
+    "title": "The Firm", 
+    "pic": "football.gif",
+    "text": "I was born in London, but was quickly taken off to Moscow, where my dad had the unenviable task of helping to set up the Russian firm.",
+  },
+  {
+    "type": "present",
+    "title": "Home Life",
+    "pic": "home-life.gif",
+    "text": "I was born in London, but was quickly taken off to Moscow, where my dad had the unenviable task of helping to set up the Russian firm.",
+  },
+  {
+    "type": "present",
+    "title": "Beyond Work",
+    "pic":"beyond-work.gif",
+    "text": "I was born in London, but was quickly taken off to Moscow, where my dad had the unenviable task of helping to set up the Russian firm.",
+  },
+]
+for(var i=0; i<aboutMe.length; i++){
+  $("#about-me-grid-[TYPE]".replace(/\[TYPE\]/g, aboutMe[i].type)).append(
+    '<div class="mdl-cell mdl-card mdl-cell--4-col mdl-shadow--2dp">\
+      <div class="mdl-card__title" style="color:white;height:300px;background:url(./pics/[NAME_CONCAT]) center / cover;">\
+        <h2 class="mdl-card__title-text">[NAME]</h2>\
+      </div>\
+      <div class="mdl-card__supporting-text">\
+        [SUPPORTING_TEXT]\
+      </div>\
+      <div class="mdl-card__actions mdl-card--border">\
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">\
+          Show me\
+        </a>\
+      </div>\
+    </div>'
+      .replace(/\[NAME\]/g, aboutMe[i].title)
+      .replace(/\[NAME_CONCAT\]/g, aboutMe[i].pic || encodeURIComponent(aboutMe[i].title)+".jpg")
+      .replace("[SUPPORTING_TEXT]", aboutMe[i].text)
+  )
+}
 
 
-
-
+</script>
 
 
 
