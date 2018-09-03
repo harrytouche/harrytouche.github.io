@@ -1,4 +1,4 @@
-var cacheName = "service-worker-cache-v03"
+var cacheName = "service-worker-cache-v04"
 var filesToCache = [
   "/index.html",
   "/about/index.html",
