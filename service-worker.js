@@ -1,6 +1,22 @@
 var cacheName = "service-worker-cache-v01"
 var filesToCache = [
-  "/resources/icon.png"
+  "/index.html",
+  "/about/index.html",
+  "/about/pics/arctic.gif",
+  "/about/pics/beyond-work.gif",
+  "/about/pics/dragon.jpg",
+  "/about/pics/eton.jpg",
+  "/about/pics/football.gif",
+  "/about/pics/george.jpg",
+  "/about/pics/home-life.gif",
+  "/about/pics/origin.jpg",
+  "/about/pics/oxford.gif",
+  "/maths-box/calculations.js",
+  "/maths-box/index.html",
+  "/maths-box/styles.css",
+  "/resources/icon.png",
+  "/resources/manifest.json",
+  "/test-site/index.html",//and more!!!
 ]
 
 //console.log("filesToCache", filesToCache)
