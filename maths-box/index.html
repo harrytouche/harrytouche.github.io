@@ -1,288 +1,105 @@
-<!doctype html>
-<html lang="en">
-
-    
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>HT | Maths Box</title>
-
-    <!-- Google Tag Manager -->
-    <script></script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Custom Scripts -->
-
-    <!-- jQuery-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <!-- MATERIAL DESIGN LITE -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-amber.min.css" />
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    
-    <!-- CSS
-    <link rel="stylesheet" href="/resources/styles.css" defer>
-    -->
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/resources/icon.png" type="image/x-icon" defer>
-    
-    
-    <!-- PWA -->
-    <link rel="manifest" href="/resources/manifest.json">
-    <meta name="theme-color" content="#3f51b5">
-
-    <!-- Apple -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-startup-image" href="/resources/icon.png">
-    <link rel="apple-touch-icon image_src" href="/resources/icon.png">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/resources/include.js" async defer></script>
 
 
-    <!-- Meta Description -->
-    <meta name="description" content="Showcasing projects and exciting things">
+<div id="content">
+  <style>
+    main {
+      background-color: #ffffee;
+      font-family: arial;
+      text-align: center;
+      font-size: x-large;
+    }
+    h1 {
+        color: navy;
+    }
+    p {
+        color: red;
+    }
 
-  </head>
+    table {
+        margin: 0 auto;
+        text-align: center;
+        font-size: x-large;
+    }
 
+    input {
+      text-align: center;
+      font-size: large;
+    }
 
-    <!--start of body tag-->
-    <body>
+    select{
+      text-align: center;
+      font-size: large;
+    }
+  </style>
 
-    <style>
-      #header-icon {
-        cursor:pointer;
-        margin-right:10px;
-        height:80%;
-        width:auto;
-      }
+  <h1>Maths Box Solver!</h1>
 
-      a i {
-        padding-right: 10px
-      }
-    </style>
+    <table>
+      <tr>
+        <td><input type="text" name="11" size="1" value=""></td>
+        <td><select type="text" name="12" size="1" value=""></td>
+        <td><input type="text" name="13" size="1" value=""></td>
+        <td><select type="text" name="14" size="1" value=""></td>
+        <td><input type="text" name="15" size="1" value=""></td>
+        <td>=</td>
+        <td><input type="text" name="16" size="1" value=""></td>
+      </tr>
+      <tr>
+        <td><select type="text" name="21" size="1" value=""></td>
+        <td></td>
+        <td><select type="text" name="23" size="1" value=""></td>
+        <td></td>
+        <td><select type="text" name="25" size="1" value=""></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="31" size="1" value=""></td>
+        <td><select type="text" name="32" size="1" value=""></td>
+        <td><input type="text" name="33" size="1" value=""></td>
+        <td><select type="text" name="34" size="1" value=""></td>
+        <td><input type="text" name="35" size="1" value=""></td>
+        <td>=</td>
+        <td><input type="text" name="36" size="1" value=""></td>
+      </tr>
+      <tr>
+        <td><select type="text" name="41" size="1" value=""></td>
+        <td></td>
+        <td><select type="text" name="43" size="1" value=""></td>
+        <td></td>
+        <td><select type="text" name="45" size="1" value=""></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="51" size="1" value=""></td>
+        <td><select type="text" name="52" size="1" value=""></td>
+        <td><input type="text" name="53" size="1" value=""></td>
+        <td><select type="text" name="54" size="1" value=""></td>
+        <td><input type="text" name="55" size="1" value=""></td>
+        <td>=</td>
+        <td><input type="text" name="56" size="1" value=""></td>
+      </tr>
+      <tr>
+        <td>=</td>
+        <td></td>
+        <td>=</td>
+        <td></td>
+        <td>=</td>
+      </tr>
+      <tr>
+        <td><input type="text" name="61" size="1" value=""></td>
+        <td></td>
+        <td><input type="text" name="63" size="1" value=""></td>
+        <td></td>
+        <td><input type="text" name="65" size="1" value=""></td>
+      </tr>
+    </table>
 
+  <br>
+  
+  <input id="solve" type="button" value="Solve!" onclick="doFunction();" />
 
-    <!-- Nav bar -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <img src="/resources/icon.png" class="img-fluid" id="header-icon" onclick="location.href='/'"/>
-          <span class="mdl-layout-title">harrytouche.github.io</span>
-          <!-- Add spacer, to align navigation to the right -->
-          <div class="mdl-layout-spacer"></div>
-          <!-- Navigation. We hide it in small screens. -->
-          <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a class="mdl-navigation__link" href="/test-site">
-              <i class="material-icons">meeting_room</i>Web Testing Site
-            </a>
-            <a class="mdl-navigation__link" href="/maths-box">
-              <i class="material-icons">add_circle_outline</i>Maths Box Solver
-            </a>
-            <a class="mdl-navigation__link" href="/about">
-              <i class="material-icons">person_add</i>About Me
-            </a>
-          </nav>
-        </div>
-      </header>
-      <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-        <span class="mdl-layout-title">harrytouche.github.io</span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="/">
-              <i class="material-icons mdl-color-text--primary">home</i>Home
-          </a>
-          <a class="mdl-navigation__link" href="/test-site">
-              <i class="material-icons mdl-color-text--primary">meeting_room</i>Web Testing Site
-          </a>
-          <a class="mdl-navigation__link" href="/maths-box">
-              <i class="material-icons mdl-color-text--primary">add_circle_outline</i>Maths Box Solver
-          </a>
-          <a class="mdl-navigation__link" href="/about">
-              <i class="material-icons mdl-color-text--primary">person_add</i>About Me
-          </a>
-        </nav>
-      </div>
+  <p name="output-text"></p>
 
+</div>
 
-      <script>
-        $('nav.mdl-layout--large-screen-only > a.mdl-navigation__link').hover(
-          function(){ $(this).addClass('mdl-color-text--accent') },
-          function(){ $(this).removeClass('mdl-color-text--accent') }
-        )
-      </script>
-
-
-
-      <!-- start of MDL main container -->
-      <main class="mdl-layout__content">
-        
-      	<style>
-		main {
-	    background-color: #ffffee;
-	    font-family: arial;
-	    text-align: center;
-	    font-size: x-large;
-		}
-		h1 {
-		    color: navy;
-		}
-		p {
-		    color: red;
-		}
-
-		table {
-		    margin: 0 auto;
-		    text-align: center;
-		    font-size: x-large;
-		}
-
-		input {
-			text-align: center;
-			font-size: large;
-		}
-
-		select{
-			text-align: center;
-			font-size: large;
-		}
-	</style>
-	<h1>Maths Box Solver!</h1>
-
-		<table>
-			<tr>
-				<td><input type="text" name="11" size="1" value=""></td>
-				<td><select type="text" name="12" size="1" value=""></td>
-				<td><input type="text" name="13" size="1" value=""></td>
-				<td><select type="text" name="14" size="1" value=""></td>
-				<td><input type="text" name="15" size="1" value=""></td>
-				<td>=</td>
-				<td><input type="text" name="16" size="1" value=""></td>
-			</tr>
-			<tr>
-				<td><select type="text" name="21" size="1" value=""></td>
-				<td></td>
-				<td><select type="text" name="23" size="1" value=""></td>
-				<td></td>
-				<td><select type="text" name="25" size="1" value=""></td>
-			</tr>
-			<tr>
-				<td><input type="text" name="31" size="1" value=""></td>
-				<td><select type="text" name="32" size="1" value=""></td>
-				<td><input type="text" name="33" size="1" value=""></td>
-				<td><select type="text" name="34" size="1" value=""></td>
-				<td><input type="text" name="35" size="1" value=""></td>
-				<td>=</td>
-				<td><input type="text" name="36" size="1" value=""></td>
-			</tr>
-			<tr>
-				<td><select type="text" name="41" size="1" value=""></td>
-				<td></td>
-				<td><select type="text" name="43" size="1" value=""></td>
-				<td></td>
-				<td><select type="text" name="45" size="1" value=""></td>
-			</tr>
-			<tr>
-				<td><input type="text" name="51" size="1" value=""></td>
-				<td><select type="text" name="52" size="1" value=""></td>
-				<td><input type="text" name="53" size="1" value=""></td>
-				<td><select type="text" name="54" size="1" value=""></td>
-				<td><input type="text" name="55" size="1" value=""></td>
-				<td>=</td>
-				<td><input type="text" name="56" size="1" value=""></td>
-			</tr>
-			<tr>
-				<td>=</td>
-				<td></td>
-				<td>=</td>
-				<td></td>
-				<td>=</td>
-			</tr>
-			<tr>
-				<td><input type="text" name="61" size="1" value=""></td>
-				<td></td>
-				<td><input type="text" name="63" size="1" value=""></td>
-				<td></td>
-				<td><input type="text" name="65" size="1" value=""></td>
-			</tr>
-		</table>
-
-	<br>
-	<script src="calculations.js"></script>
-	<input id="solve" type="button" value="Solve!" onclick="doFunction();" />
-
-	<p name="output-text"></p>
-
-
-	<script>
-		// script sets the options available for the operators
-		var options = 	"<option>+</option>"+
-						"<option>-</option>"+
-						"<option>*</option>"+
-						"<option>/</option>"
-
-		for(i=0; i<document.getElementsByTagName("select").length; i++){
-			document.getElementsByTagName("select")[i].innerHTML = options
-		}
-	
-		for(i=0; i<document.getElementsByTagName("input").length; i++){
-			if(document.getElementsByTagName("input")[i].name.indexOf("6") == -1){
-				document.getElementsByTagName("input")[i].maxLength = "1"
-			}
-		}
-		
-
-	</script>
-
-
-
-
-
-
-
-      </main>
-
-
-
-
-
-
-<script>
-            if ('serviceWorker' in navigator) {
-              window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js').then(function(reg) {
-                  // updatefound is fired if service-worker.js changes.
-                  reg.onupdatefound = function() {
-                    // The updatefound event implies that reg.installing is set
-                    var installingWorker = reg.installing;
-                    installingWorker.onstatechange = function() {
-                      switch (installingWorker.state) {
-                        case 'installed':
-                          if (navigator.serviceWorker.controller) {
-                            // At this point, the old content will have been purged
-                            console.log('New or updated content is available.');
-                          } else {
-                            console.log('Content is now available offline!');
-                          }
-                          break;
-                        case 'redundant':
-                          console.error('The installing service worker became redundant.');
-                          break;
-                      }
-                    };
-                  };
-                }).catch(function(e) {
-                  console.error('Error during service worker registration:', e);
-                });
-              });
-            }
-        </script>
-
-
-
-
-
-
-    </div>
-  </body>
-</html>
+<script src="calculations.js"></script>

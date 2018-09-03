@@ -1,3 +1,13 @@
+// add options to dropdowns
+window.setTimeout(function(){
+	$("select").html("\
+		<option>+</option>\
+		<option>-</option>\
+		<option>*</option>\
+		<option>/</option>")
+}, 1000)
+
+
 function doFunction(){
 
 	//console.log(data)
