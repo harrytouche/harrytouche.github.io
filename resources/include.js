@@ -6,5 +6,5 @@ var pageContent = $("#content").html()
 
 // add body in
 $("body").load("/resources/body.html", function(){
-    $("main").html(pageContent)    
+    $("main").html(pageContent)
 })

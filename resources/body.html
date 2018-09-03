@@ -1,3 +1,5 @@
+<div id="blocker" style="height:100%;width:100%;"></div>
+
 <style>
       #header-icon {
         cursor:pointer;
@@ -110,7 +112,8 @@
       <script>
         function upgradeComponents(){
           try{
-            componentHandler.upgradeAllRegistered()
+            componentHandler.upgradeAllRegistered() //upgrade MDL components
+            $("#blocker").remove() //remove blocker
             //console.log("CH: Upgraded successfully")
           }catch(err){
             //console.log("CH: Trying to fire upgrade again")
