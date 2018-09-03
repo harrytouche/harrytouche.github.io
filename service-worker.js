@@ -1,6 +1,13 @@
 var cacheName = "service-worker-cache-v05"
 var filesToCache = [
+  "/resources/manifest.json",
+  "/resources/body.html",
+  "/resources/head.html",
+  "/resources/include.js",
+  "/resources/icon.png",
+
   "/index.html",
+  
   "/about/index.html",
   "/about/pics/arctic.gif",
   "/about/pics/beyond-work.gif",
@@ -11,13 +18,10 @@ var filesToCache = [
   "/about/pics/home-life.gif",
   "/about/pics/origin.jpg",
   "/about/pics/oxford.gif",
+  
   "/maths-box/calculations.js",
   "/maths-box/index.html",
-  "/resources/icon.png",
-  "/resources/manifest.json",
-  "/resources/body.html",
-  "/resources/head.html",
-  "/resources/include.js",
+  
   "/test-site/index.html",
   "/test-site/order-confirmation.html",
   "/test-site/productA.jpg",
