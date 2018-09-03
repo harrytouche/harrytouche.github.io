@@ -6,7 +6,7 @@ var filesToCache = [
   "/resources/include.js",
   "/resources/icon.png",
 
-  "/index.html",
+  "/?launchType=pwa",
   
   "/about/index.html",
   "/about/pics/arctic.gif",
