@@ -1,0 +1,16 @@
+{
+  "name": "harrytouche.github.io",
+  "short_name": "ht.gh.io",
+  "icons": [
+    {
+      "src": "/resources/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?launchType=pwa",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ffffff"
+}
