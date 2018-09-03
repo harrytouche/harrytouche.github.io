@@ -1,4 +1,4 @@
-var cacheName = "service-worker-cache-v02"
+var cacheName = "service-worker-cache-v03"
 var filesToCache = [
   "/index.html",
   "/about/index.html",
@@ -16,6 +16,9 @@ var filesToCache = [
   "/maths-box/styles.css",
   "/resources/icon.png",
   "/resources/manifest.json",
+  "/resources/body.html",
+  "/resources/head.html",
+  "/resources/include.js",
   "/test-site/index.html",
   "/test-site/order-confirmation.html",
   "/test-site/productA.jpg",
