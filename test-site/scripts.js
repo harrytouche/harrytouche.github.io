@@ -7,10 +7,6 @@ digitalData = {
     }
 }
 
-// set document title
-document.title = digitalData.pageName
-
-
 
 // send signal off to AAM and print out the response
 sendSignal = function(dilObject, inputObject){

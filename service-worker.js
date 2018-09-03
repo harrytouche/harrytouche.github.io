@@ -1,4 +1,4 @@
-var cacheName = "service-worker-cache-v01"
+var cacheName = "service-worker-cache-v02"
 var filesToCache = [
   "/index.html",
   "/about/index.html",
@@ -16,7 +16,15 @@ var filesToCache = [
   "/maths-box/styles.css",
   "/resources/icon.png",
   "/resources/manifest.json",
-  "/test-site/index.html",//and more!!!
+  "/test-site/index.html",
+  "/test-site/order-confirmation.html",
+  "/test-site/productA.jpg",
+  "/test-site/productB.jpg",
+  "/test-site/productC.jpg",
+  "/test-site/scripts.js",
+  "/test-site/scripts_home.js",
+  "/test-site/scripts_oc.js",
+  "/test-site/styles.css"
 ]
 
 //console.log("filesToCache", filesToCache)
