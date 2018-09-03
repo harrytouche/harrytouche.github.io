@@ -13,7 +13,6 @@ var filesToCache = [
   "/about/pics/oxford.gif",
   "/maths-box/calculations.js",
   "/maths-box/index.html",
-  "/maths-box/styles.css",
   "/resources/icon.png",
   "/resources/manifest.json",
   "/resources/body.html",
