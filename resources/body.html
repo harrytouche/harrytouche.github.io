@@ -99,5 +99,18 @@
             }
         </script>
 
-
     </div>
+
+
+      <script>
+        function upgradeComponents(){
+          try{
+            componentHandler.upgradeAllRegistered()
+            console.log("CH: Upgraded successfully")
+          }catch(err){
+            console.log("CH: Trying to fire upgrade again")
+            window.setTimeout(function(){upgradeComponents()},1000)
+          }
+        }
+        upgradeComponents()
+      </script>
