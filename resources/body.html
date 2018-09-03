@@ -106,9 +106,9 @@
         function upgradeComponents(){
           try{
             componentHandler.upgradeAllRegistered()
-            console.log("CH: Upgraded successfully")
+            //console.log("CH: Upgraded successfully")
           }catch(err){
-            console.log("CH: Trying to fire upgrade again")
+            //console.log("CH: Trying to fire upgrade again")
             window.setTimeout(function(){upgradeComponents()},1000)
           }
         }
