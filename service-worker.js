@@ -1,4 +1,4 @@
-var cacheName = "service-worker-cache-v05"
+var cacheName = "service-worker-cache-v06"
 var filesToCache = [
   "/resources/manifest.json",
   "/resources/body.html",
