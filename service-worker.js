@@ -8,7 +8,7 @@ var filesToCache = [
 
   "/",
   
-  "/about",
+  "/about/",
   "/about/pics/arctic.gif",
   "/about/pics/beyond-work.gif",
   "/about/pics/dragon.jpg",
@@ -20,9 +20,9 @@ var filesToCache = [
   "/about/pics/oxford.gif",
   
   "/maths-box/calculations.js",
-  "/maths-box",
+  "/maths-box/",
   
-  "/test-site",
+  "/test-site/",
   "/test-site/order-confirmation.html",
   "/test-site/productA.jpg",
   "/test-site/productB.jpg",
