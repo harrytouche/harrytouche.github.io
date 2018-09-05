@@ -2,6 +2,24 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="/resources/include.js" async defer></script>
 
+<head>
+    <script>
+      if(localStorage.tm == "gtm"){
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5DTHTCR');
+      } else if (localStorage.tm == "dtm"){
+          $("<script src='//assets.adobedtm.com/076c7ec58205a2a3fb3547bee9d6c063df9870c1/satelliteLib-aa1a083fdf6a8bfb3a638f0f414035e91fae29aa.js'><\/script>").appendTo("head")
+      } else if (localStorage.tm == "opentag"){
+          $("<script src='//d3c3cq33003psk.cloudfront.net/opentag-177250-testwebsite.js' async defer><\/script>").appendTo("head")
+      } else if (localStorage.tm == "launch"){
+          $('<script src="//assets.adobedtm.com/launch-ENa2ef5bca58e642239e71cd81931a9696.min.js" async><\/script>').appendTo("head")
+      }
+    </script>
+</head>
+
 
 <div id="content">
 
@@ -22,21 +40,6 @@
  </div>
 
 
-   <script>
-      if(localStorage.tm == "gtm"){
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-5DTHTCR');
-      } else if (localStorage.tm == "dtm"){
-          document.write("<script src='//assets.adobedtm.com/076c7ec58205a2a3fb3547bee9d6c063df9870c1/satelliteLib-aa1a083fdf6a8bfb3a638f0f414035e91fae29aa.js'><\/script>")
-      } else if (localStorage.tm == "opentag"){
-          document.write("<script src='//d3c3cq33003psk.cloudfront.net/opentag-177250-testwebsite.js' async defer><\/script>")
-      } else if (localStorage.tm == "launch"){
-          document.write('<script src="//assets.adobedtm.com/launch-ENa2ef5bca58e642239e71cd81931a9696.min.js" async><\/script>')
-      }
-  </script>
   <script src="scripts.js"></script>
   <script src="scripts_oc.js"></script>
   <script type="text/javascript">
