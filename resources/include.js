@@ -1,15 +1,11 @@
-// load custom head
-//$("head").load("/resources/head.html")
+// get head from file, append to existing head
 $.get('/resources/head.html', function(result) {
     $('head').append(result);
 });
 
 
-
-// save current content
-var pageContent = $("#content").html()
-
-// add body in
-$("body").load("/resources/body.html", function(){
-    $("main").html(pageContent)
+// get body from file, append then slot content in
+$.get("/resources/body.html", function(result){
+    $("body").append(result)
+    $("main").html($("#content"))
 })
