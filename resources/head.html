@@ -8,7 +8,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125190509-1"></script>
     <script>
-        if(!~location.hostname.indexOf("127.0.0.1")){
+        if(~location.href.indexOf("forceanalytics") || !~location.hostname.indexOf("127.0.0.1")){
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());

@@ -1,70 +1,72 @@
-// load basket from data layer and save on page exit
-digitalData.basket = (localStorage.basket) ? JSON.parse(localStorage.basket) : undefined
-window.addEventListener("beforeunload",function(){
-    localStorage.basket = JSON.stringify(digitalData.basket) || ""
-})
+function scriptsHomeReady(){
+    // load basket from data layer and save on page exit
+    digitalData.basket = (localStorage.basket) ? JSON.parse(localStorage.basket) : undefined
+    window.addEventListener("beforeunload",function(){
+        localStorage.basket = JSON.stringify(digitalData.basket) || ""
+    })
 
-digitalData.products = [
-    {name: "Bouquet of Flowers", price:15.00, image:"productA.jpg", sku: "abc123", color:"purple", category:"gift"},
-    {name: "Bar Tab", price:60.00, image:"productB.jpg", sku: "def456", color: "n/a", category:"gift"},
-    {name: "Skin-Tight Cycling Gear", price:99.00, image:"productC.jpg", sku: "ghi789", color:"purple", category:"clothes"}
-]
-
-
-
-// clear order details
-localStorage.order = ""
+    digitalData.products = [
+        {name: "Bouquet of Flowers", price:15.00, image:"productA.jpg", sku: "abc123", color:"purple", category:"gift"},
+        {name: "Bar Tab", price:60.00, image:"productB.jpg", sku: "def456", color: "n/a", category:"gift"},
+        {name: "Skin-Tight Cycling Gear", price:99.00, image:"productC.jpg", sku: "ghi789", color:"purple", category:"clothes"}
+    ]
 
 
-// set user information
-try{
-    document.getElementById("user_info").innerText = "Your grade is " + digitalData.user.grade + " and your experience level is " + digitalData.user.level
-} catch(err){
-    console.log("Can't display user info")
-}
 
-// create product cards below
-try{
-    for (var i=0; i<digitalData.products.length; i++){
-        var mydiv = document.createElement("div")
-        mydiv.classList.add("product-card")
+    // clear order details
+    localStorage.order = ""
 
-        // image
-        var productImage = document.createElement("img")
-        productImage.src = digitalData.products[i].image
-        mydiv.appendChild(productImage)
 
-        // name
-        var productName = document.createElement("h4")
-        productName.innerText = digitalData.products[i].name
-        mydiv.appendChild(productName)
-
-        // price
-        var productPrice = document.createElement("h4")
-        productPrice.innerText = "$" + digitalData.products[i].price
-        mydiv.appendChild(productPrice)
-
-        // purchase button
-        var productForm = document.createElement("form")
-        productForm.setAttribute("onsubmit", "addToBasket(this); return false")
-        productForm.setAttribute("name", "addToBasketForm")
-        
-        var productSKU = document.createElement("input")
-        productSKU.setAttribute("name", "productSKU")
-        productSKU.setAttribute("type", "text")
-        productSKU.classList.add("product-sku")
-        productSKU.value = digitalData.products[i].sku
-        productForm.appendChild(productSKU)
-
-        var productBuyButton = document.createElement("input")
-        productBuyButton.setAttribute("type", "submit")
-        productForm.appendChild(productBuyButton)
-        mydiv.appendChild(productForm)
-
-        document.getElementById("product-card-holder").appendChild(mydiv)
+    // set user information
+    try{
+        document.getElementById("user_info").innerText = "Your grade is " + digitalData.user.grade + " and your experience level is " + digitalData.user.level
+    } catch(err){
+        console.log("Can't display user info")
     }
-} catch(err){
-    console.log("Can't add product information")
+
+    // create product cards below
+    try{
+        for (var i=0; i<digitalData.products.length; i++){
+            var mydiv = document.createElement("div")
+            mydiv.classList.add("product-card")
+
+            // image
+            var productImage = document.createElement("img")
+            productImage.src = digitalData.products[i].image
+            mydiv.appendChild(productImage)
+
+            // name
+            var productName = document.createElement("h4")
+            productName.innerText = digitalData.products[i].name
+            mydiv.appendChild(productName)
+
+            // price
+            var productPrice = document.createElement("h4")
+            productPrice.innerText = "$" + digitalData.products[i].price
+            mydiv.appendChild(productPrice)
+
+            // purchase button
+            var productForm = document.createElement("form")
+            productForm.setAttribute("onsubmit", "addToBasket(this); return false")
+            productForm.setAttribute("name", "addToBasketForm")
+            
+            var productSKU = document.createElement("input")
+            productSKU.setAttribute("name", "productSKU")
+            productSKU.setAttribute("type", "text")
+            productSKU.classList.add("product-sku")
+            productSKU.value = digitalData.products[i].sku
+            productForm.appendChild(productSKU)
+
+            var productBuyButton = document.createElement("input")
+            productBuyButton.setAttribute("type", "submit")
+            productForm.appendChild(productBuyButton)
+            mydiv.appendChild(productForm)
+
+            document.getElementById("product-card-holder").appendChild(mydiv)
+        }
+    } catch(err){
+        console.log("Can't add product information")
+    }
 }
 
 
