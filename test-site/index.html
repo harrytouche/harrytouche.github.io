@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-
 <div id="blocker" style="height:100%;width:100%;"></div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="/resources/include.js" async defer></script>
-
 
 <head>
     <script>
@@ -19,7 +17,8 @@
           $("<script src='//assets.adobedtm.com/076c7ec58205a2a3fb3547bee9d6c063df9870c1/satelliteLib-aa1a083fdf6a8bfb3a638f0f414035e91fae29aa.js'><\/script>").appendTo("head")
       } else if (localStorage.tm == "opentag"){
           $("<script src='//d3c3cq33003psk.cloudfront.net/opentag-177250-testwebsite.js' async defer><\/script>").appendTo("head")
-      } else if (localStorage.tm == "launch"){
+      } else if (localStorage.tm == "none"){
+      } else {
           $('<script src="//assets.adobedtm.com/launch-ENa2ef5bca58e642239e71cd81931a9696.min.js" async><\/script>').appendTo("head")
       }
     </script>
