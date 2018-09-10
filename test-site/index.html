@@ -28,6 +28,14 @@
 
     <div id="title">
         <h2>Welcome to my Analytics test website!</h2>
+        <h5>Choose a tag manager (Default is Launch)</h5>
+        <div>
+          <button onclick="localStorage.tm='gtm'">Google Tag Manager</button>
+          <button onclick="localStorage.tm=''">Adobe Launch</button>
+          <button onclick="localStorage.tm='dtm'">Adobe DTM</button>
+          <button onclick="localStorage.tm='opentag'">OpenTag</button>
+          <button onclick="localStorage.tm='none'">None</button>
+        </div>
     </div>
 
     <!-- PAGE LOAD RULES -->
