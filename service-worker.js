@@ -1,4 +1,4 @@
-var cacheName = "service-worker-cache-v08"
+var cacheName = "service-worker-cache-v09"
 var filesToCache = [
   "/resources/manifest.json",
   "/resources/body.html",
@@ -6,18 +6,35 @@ var filesToCache = [
   "/resources/include.js",
   "/resources/icon.png",
 
+  "/resources/pics/homepage/adobe-analytics.jpg",
+  "/resources/pics/homepage/adobe-audience-manager.jpg",
+  "/resources/pics/homepage/adobe-launch.png",
+  "/resources/pics/homepage/adobe-target.png",
+  "/resources/pics/homepage/alteryx.jpg",
+  "/resources/pics/homepage/css.jpg",
+  "/resources/pics/homepage/flask.jpg",
+  "/resources/pics/homepage/google-analytics.jpg",
+  "/resources/pics/homepage/google-optimize.jpg",
+  "/resources/pics/homepage/google-tag-manager.png",
+  "/resources/pics/homepage/heroku.jpg",
+  "/resources/pics/homepage/html.png",
+  "/resources/pics/homepage/javascript.png",
+  "/resources/pics/homepage/python.png",
+  "/resources/pics/homepage/tableau.jpg",
+  
+  "/resources/pics/about/arctic.gif",
+  "/resources/pics/about/beyond-work.gif",
+  "/resources/pics/about/dragon.jpg",
+  "/resources/pics/about/eton.jpg",
+  "/resources/pics/about/football.gif",
+  "/resources/pics/about/george.jpg",
+  "/resources/pics/about/home-life.gif",
+  "/resources/pics/about/origin.jpg",
+  "/resources/pics/about/oxford.gif",
+
   "/",
   
   "/about/",
-  "/about/pics/arctic.gif",
-  "/about/pics/beyond-work.gif",
-  "/about/pics/dragon.jpg",
-  "/about/pics/eton.jpg",
-  "/about/pics/football.gif",
-  "/about/pics/george.jpg",
-  "/about/pics/home-life.gif",
-  "/about/pics/origin.jpg",
-  "/about/pics/oxford.gif",
   
   "/maths-box/calculations.js",
   "/maths-box/",
@@ -32,8 +49,6 @@ var filesToCache = [
   "/test-site/scripts_oc.js",
   "/test-site/styles.css"
 ]
-
-//console.log("filesToCache", filesToCache)
 
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');

@@ -4,5 +4,84 @@
 
 
 <div id="content">
-  <p> here is some content</p>
+  <h3 style="text-align: center">Experience</h3>
+  <div class="mdl-grid" id="skills-grid" style="justify-content:center; text-align: justify"></div>
 </div>
+
+<script>
+  var skills = [
+    {
+      "title": "Adobe Analytics",
+      "pic": "adobe-analytics.jpg", 
+    },
+    {
+      "title": "Adobe Audience Manager",
+      "pic": "adobe-audience-manager.jpg", 
+    },
+    {
+      "title": "Adobe Launch",
+      "pic": "adobe-launch.png", 
+    },
+    {
+      "title": "Adobe Target",
+      "pic": "adobe-target.png", 
+    },
+    {
+      "title": "Alteryx",
+      "pic": "alteryx.jpg", 
+    },
+    {
+      "title": "CSS",
+      "pic": "css.jpg", 
+    },
+    {
+      "title": "Flask",
+      "pic": "flask.jpg", 
+    },
+    {
+      "title": "Google Analytics",
+      "pic": "google-analytics.jpg", 
+    },
+    {
+      "title": "Google Optimize",
+      "pic": "google-optimize.jpg", 
+    },
+    {
+      "title": "Google Tag Manager",
+      "pic": "google-tag-manager.png", 
+    },
+    {
+      "title": "Heroku",
+      "pic": "heroku.jpg", 
+    },
+    {
+      "title": "HTML",
+      "pic": "html.png", 
+    },
+    {
+      "title": "JavaScript",
+      "pic": "javascript.png", 
+    },
+    {
+      "title": "Python",
+      "pic": "python.png", 
+    },
+    {
+      "title": "Tableau",
+      "pic": "tableau.jpg", 
+    },
+  ]
+  //window.setTimeout(function(){
+    for(var i=0; i<skills.length; i++){
+        $("#skills-grid").append(
+          '<div class="mdl-cell mdl-card mdl-cell--2-col mdl-shadow--2dp">\
+            <div class="mdl-card__title" style="height:200px;background:url(/resources/pics/homepage/[NAME_CONCAT]) center / cover;">\
+            </div>\
+            <h4 class="remove-mdl-card__title-text" style="text-align:center">[NAME]</h4>\
+          </div>'
+            .replace(/\[NAME\]/g, skills[i].title)
+            .replace(/\[NAME_CONCAT\]/g, skills[i].pic)
+        )
+    }
+  //},2000)
+</script>
