@@ -28,7 +28,7 @@
 
     <div id="title">
         <h2>Welcome to my Analytics test website!</h2>
-        <h5>Choose a tag manager (Default is Launch)</h5>
+        <h5 id="tms-selector">Choose a tag manager. Current one is: </h5>
         <div>
           <button onclick="localStorage.tm='gtm'">Google Tag Manager</button>
           <button onclick="localStorage.tm=''">Adobe Launch</button>
@@ -37,6 +37,9 @@
           <button onclick="localStorage.tm='none'">None</button>
         </div>
     </div>
+    <script>
+      $("#tms-selector").text($("#tms-selector").text() + (localStorage.tm || "launch").toUpperCase())
+    </script>
 
     <!-- PAGE LOAD RULES -->
     <hr>
