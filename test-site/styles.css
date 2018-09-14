@@ -60,3 +60,7 @@ form {
     display: block;
     height: 0;
 }
+
+.product-card img {
+    width:100%;
+}
