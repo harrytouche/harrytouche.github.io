@@ -1,4 +1,4 @@
-var cacheName = "service-worker-cache-v12"
+var cacheName = "service-worker-cache-v14"
 var filesToCache = [
   "/resources/manifest.json",
   "/resources/body.html",
@@ -21,7 +21,7 @@ var filesToCache = [
   "/resources/pics/homepage/javascript.png",
   "/resources/pics/homepage/python.png",
   "/resources/pics/homepage/tableau.jpg",
-  
+
   "/resources/pics/about/arctic.gif",
   "/resources/pics/about/beyond-work.gif",
   "/resources/pics/about/dragon.jpg",
@@ -33,12 +33,12 @@ var filesToCache = [
   "/resources/pics/about/oxford.gif",
 
   "/",
-  
+
   "/about/",
-  
+
   "/maths-box/calculations.js",
   "/maths-box/",
-  
+
   "/test-site/",
   "/test-site/order-confirmation.html",
   "/test-site/productA.jpg",
@@ -53,7 +53,7 @@ var filesToCache = [
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
   var now = Date.now();
-  e.waitUntil(  
+  e.waitUntil(
   caches.open(cacheName).then(function(cache) {
       var cachePromises = filesToCache.map(function(fileToCache) {
         var url = new URL(fileToCache, location.href);
