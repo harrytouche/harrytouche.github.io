@@ -47,7 +47,10 @@ var filesToCache = [
   "/test-site/scripts.js",
   "/test-site/scripts_home.js",
   "/test-site/scripts_oc.js",
-  "/test-site/styles.css"
+  "/test-site/styles.css",
+
+  "/scorekeeper/index.html",
+  "/scorekeeper/scoreScripts.js"
 ]
 
 self.addEventListener('install', function(e) {
