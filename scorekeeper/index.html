@@ -1,0 +1,74 @@
+<div id="blocker" style="height:100%;width:100%;"></div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/resources/include.js" async defer></script>
+
+
+<div id="content">
+    <style>
+        #total-scores {
+            width: 100%
+        }
+
+        input {
+            width: 50px; 
+        }
+
+        #scoreboard {
+            justify-content: center;
+        }
+
+        .mdl-card__title {
+            justify-content: center
+        }
+
+        .mdl-card__supporting-text {
+            text-align: left
+        }
+
+        .mdl-card {
+            min-height: 50px
+        }
+
+        #content {
+            text-align: center;
+        }
+
+    </style>
+
+    <h1 style="text-align: center">Scorekeeper</h1>
+
+
+    <button id="start-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="init()">
+        Start!
+    </button>
+
+
+    <div id="total-board" class="mdl-cell mdl-card mdl-cell--4-col mdl-shadow--2dp" style="margin:auto; display: none">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Total Scores</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <table id="total-scores" class="mdl-data-table mdl-js-data-table">
+                <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Name</th>
+                        <th>Score</th>
+                        <th>Addition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="mdl-grid" id="scoreboard"></div>
+
+
+
+
+</div>
+
+<script src="scoreScripts.js"></script>
