@@ -80,11 +80,15 @@ document.getElementById("dynamic_banner").appendChild(bannerElement)
 
 
 
-
-
-
 cycleColor = function(thisObject){
     var colors = ["gold", "lightseagreen", "beige", "green", "blue", "yellow", "cyan", "pink", "magenta", "fuschia", "cadetblue"]
+    
+    // remove current color
+    var currentColorIndex = colors.indexOf(thisObject.style.backgroundColor)
+    if(~currentColorIndex){
+        colors.splice(currentColorIndex,1)
+    }
+
     var newColor = colors[Math.floor(Math.random()*10)]
     digitalData.carouselColor = newColor
 
