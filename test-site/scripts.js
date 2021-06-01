@@ -24,3 +24,8 @@ sendSignal = function(dilObject, inputObject){
   })
   .submit();
 }
+
+
+consentOptIn = function(optin){
+  dataLayer.push({event:((optin)?"consent_granted":"consent_denied")})
+}
