@@ -129,7 +129,7 @@ addToBasket = function(thisForm){
     }
 
     try{_satellite.track("AddToBasket")}catch(err){console.log("Not able to fire direct call rule")}
-    try{dataLayer.push({event:"AddToBasket", productSKU: productSKU})}
+    try{dataLayer.push({event:"AddToBasket", productSKU: productSKU})}catch(err){console.log("Not able to fire dataLayer push")}
     document.getElementById("add-to-basket-notification").innerHTML = "<h4>Thanks for adding " + productSKU + " to the basket</h4>"
     return false
 }
