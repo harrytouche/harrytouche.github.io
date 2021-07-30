@@ -47,8 +47,10 @@ function scriptsOCReady(){
         orderID: (localStorage.order) ? JSON.parse(localStorage.order).orderID : undefined
     }
 
-
     // add text to page
     document.getElementById("order-summary").innerText = "You purchased " + totalUnits + " units, at a total cost of $" + totalCost.toFixed(0) + ". Your order number is: " + digitalData.order.orderID
+
+    // send transaction
+    try{dataLayer.push({event:"OrderConfirmation"})}catch(err){console.log("Not able to fire dataLayer push")}
 
 }
