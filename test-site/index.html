@@ -18,6 +18,8 @@
       } else if (localStorage.tm == "opentag"){
           $("<script src='//d3c3cq33003psk.cloudfront.net/opentag-177250-testwebsite.js' async defer><\/script>").appendTo("head")
       } else if (localStorage.tm == "none"){
+      } else if (localStorage.tm == "aep"){
+        $('<script src="//assets.adobedtm.com/d9fe0ea961b4/a0ac045ecad3/launch-03cc85386eb1.min.js" async><\/script>').appendTo("head")
       } else {
           $('<script src="//assets.adobedtm.com/launch-ENa2ef5bca58e642239e71cd81931a9696.min.js" async><\/script>').appendTo("head")
       }
@@ -32,6 +34,7 @@
         <div>
           <button onclick="localStorage.tm='gtm'">Google Tag Manager</button>
           <button onclick="localStorage.tm=''">Adobe Launch</button>
+          <button onclick="localStorage.tm='aep'">Adobe Launch (Web SDK / AEP)</button>
           <button onclick="localStorage.tm='dtm'">Adobe DTM</button>
           <button onclick="localStorage.tm='opentag'">OpenTag</button>
           <button onclick="localStorage.tm='none'">None</button>
